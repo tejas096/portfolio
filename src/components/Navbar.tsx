@@ -36,7 +36,7 @@ const Navbar = () => {
         </li>
         <li>
           <WrapIcons
-            link="/tools"
+            link="/skills"
             tooltip="Skills"
             children={<Wrench size={20} className="cursor-pointer" />}
           />
