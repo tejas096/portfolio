@@ -25,7 +25,7 @@ const App = () => {
           element: <Project />,
         },
         {
-          path: "/tools",
+          path: "/skills",
           element: <Tools />,
         },
         {

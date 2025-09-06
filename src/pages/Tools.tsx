@@ -35,6 +35,7 @@ const Tools: React.FC = () => {
                 Frameworks & Libraries
               </h2>
               <ul className="space-y-2 text-[rgb(217,217,217)]">
+                <li>Next.js</li>
                 <li>React</li>
                 <li>Node.js</li>
                 <li>Express.js</li>
