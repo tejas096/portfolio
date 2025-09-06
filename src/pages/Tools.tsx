@@ -5,7 +5,7 @@ const Tools: React.FC = () => {
     <div className="h-[calc(100vh-150px)] lg:h-[580px] w-full overflow-y-scroll scrollbar-hide">
       <div className="flex lg:flex-row max-lg:gap-[70px] flex-col h-full">
         <div className="lg:w-[60%] w-full h-full flex items-center justify-center">
-          <h1 className="text-[36px] xs:text-[48px] xl:text-[78px] leading-[1.2em] font-bold tracking-tight">
+          <h1 className="text-[50px] sm:text-[62px] xl:text-[78px] leading-[1.2em] font-bold tracking-tight">
             Code is like humor.
             <br /> When you have to <br />
             explain it,{" "}
