@@ -8,7 +8,7 @@ type PropType = {
 };
 const SkillCard = ({ name, title, image, addClass }: PropType) => {
   return (
-    <Link to={"/skills"}>
+    <Link to={"/skills"} className="w-full">
       <div
         className={`${
           addClass && `${addClass}`
