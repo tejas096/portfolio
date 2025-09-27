@@ -2,16 +2,44 @@ import {
   House,
   Folder,
   Wrench,
-  Briefcase,
+  // Briefcase,
   Newspaper,
   Mail,
-  GraduationCap,
+  // GraduationCap,
   ArrowDownToLine,
 } from "lucide-react";
 import WrapIcons from "./WrapIcons";
 import { NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
+
+const sections = ["summary", "project", "skills", "blog", "contact"];
 
 const Navbar = () => {
+  const [active, setActive] = useState("summary");
+
+  useEffect(() => {
+    const container = document.getElementById("scroll-container");
+
+    const handleScroll = () => {
+      if (!container) return;
+      const scrollPosition = container.scrollTop + container.clientHeight / 3;
+
+      for (let id of sections) {
+        const section = document.getElementById(id);
+        if (
+          section &&
+          section.offsetTop <= scrollPosition &&
+          section.offsetTop + section.offsetHeight > scrollPosition
+        ) {
+          setActive(id);
+        }
+      }
+    };
+
+    container?.addEventListener("scroll", handleScroll);
+    return () => container?.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <nav className="bg-[rgb(39,40,41)] lg:h-[48px] md:w-[760px] lg:w-[800px] xl:w-[1200px] self-center rounded-xl flex py-[5px] px-[30px] items-center">
       <NavLink className="hidden mr-auto lg:block" to="/">
@@ -22,50 +50,60 @@ const Navbar = () => {
       <ul className="flex gap-[8px] lg:mx-auto">
         <li>
           <WrapIcons
-            link="/"
+            link="summary"
+            active={active}
+            setActive={setActive}
             tooltip="Home"
             children={<House size={20} className="cursor-pointer" />}
           />
         </li>
         <li>
           <WrapIcons
-            link="/projects"
+            link="project"
             tooltip="Projects"
+            active={active}
+            setActive={setActive}
             children={<Folder size={20} className="cursor-pointer" />}
           />
         </li>
         <li>
           <WrapIcons
-            link="/skills"
+            link="skills"
             tooltip="Skills"
+            active={active}
+            setActive={setActive}
             children={<Wrench size={20} className="cursor-pointer" />}
           />
         </li>
-        <li>
+        {/* <li>
           <WrapIcons
             link="/experience"
             tooltip="Experience"
             children={<Briefcase size={20} className="cursor-pointer" />}
           />
-        </li>
-        <li>
+        </li> */}
+        {/* <li>
           <WrapIcons
             link="/education"
             tooltip="Eductaion"
             children={<GraduationCap size={20} className="cursor-pointer" />}
           />
-        </li>
+        </li> */}
         <li>
           <WrapIcons
-            link="/blogs"
+            link="blog"
             tooltip="Blogs"
+            active={active}
+            setActive={setActive}
             children={<Newspaper size={20} className="cursor-pointer" />}
           />
         </li>
         <li>
           <WrapIcons
-            link="/contact"
+            link="contact"
             tooltip="Contact"
+            active={active}
+            setActive={setActive}
             children={<Mail size={20} className="cursor-pointer" />}
           />
         </li>

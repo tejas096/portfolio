@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { type ReactNode } from "react";
 import { NavLink } from "react-router-dom";
 import * as Tooltip from "@radix-ui/react-tooltip";
 
@@ -6,17 +6,36 @@ type PropType = {
   children: ReactNode;
   link: string;
   tooltip: string;
+  active: string;
+  setActive: (id: string) => void;
 };
 
-const WrapIcons = ({ children, link, tooltip }: PropType) => {
+const WrapIcons = ({
+  children,
+  link,
+  tooltip,
+  active,
+  setActive,
+}: PropType) => {
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      setActive(id);
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <Tooltip.Provider delayDuration={0} skipDelayDuration={0}>
       <Tooltip.Root>
         <NavLink
-          to={link}
-          className={({ isActive }) =>
+          to={"/"}
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToSection(link);
+          }}
+          className={() =>
             `h-[35px] w-[35px] flex items-center justify-center transition-all duration-300 ease-in-out rounded-lg transition-colors duration-300 ease-in-out ${
-              isActive
+              active === link
                 ? "bg-[rgb(145,75,241)] hover:text-white"
                 : "bg-[rgb(39,40,41)] hover:text-[rgb(145,75,241)]"
             }`
