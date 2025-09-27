@@ -9,7 +9,7 @@ type PropType = {
   link: string;
 };
 
-const ProjectCard = ({ id, name, title, image, link }: PropType) => {
+const ProjectCard = ({ name, title, image, link }: PropType) => {
   return (
     // <Link to={`/projects/#project${id}`} className="block w-full h-full">
     <div className="group h-full cursor-pointer w-[320px] sm:w-[480px] md:w-[600px] p-[20px] flex flex-col justify-between gap-[20px] rounded-xl snap-center shrink-0 bg-[rgb(39,40,41)]">
