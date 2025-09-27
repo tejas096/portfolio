@@ -3,6 +3,12 @@ import myImage from "../assests/tejas.webp";
 import { Link } from "react-router-dom";
 
 const Profile: React.FC = () => {
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div className="bg-[rgb(39,40,41)] pointer-events-none lg:fixed h-full lg:h-[580px] w-[350px] xs:w-full sm:w-[560px] lg:w-[350px] rounded-xl flex justify-evenly items-center flex-col">
       <img
@@ -44,7 +50,11 @@ const Profile: React.FC = () => {
         </a>
       </div>
       <Link
-        to={"/contact"}
+        to={"/"}
+        onClick={(e) => {
+          e.preventDefault();
+          scrollToSection("contact");
+        }}
         className="h-[44px] pointer-events-auto font-semibold w-[180px] rounded-lg flex justify-center items-center bg-[rgb(145,75,241)]"
       >
         Let's Talk

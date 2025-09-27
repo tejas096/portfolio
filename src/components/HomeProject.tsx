@@ -28,7 +28,7 @@ const HomeSecond = () => {
           name={"Travelnest"}
           image={Airbnb}
           title="A full-stack Airbnb clone featuring property listings, maps integration, reviews, and secure authentication with complete CRUD operations for adding, editing, and managing stays seamlessly."
-          link={"https://www.airbnb.co.in/"}
+          link={"https://travelnest-tj.vercel.app/"}
         />
       </div>
     </div>

@@ -11,6 +11,12 @@ const HomeMain = () => {
     "AI/ML Enthusiast",
     "Open Source Contributor",
   ];
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div className="flex justify-between h-full max-lg:snap-start lg:ml-auto w-[320px] xs:w-full md:w-[600px] xl:w-[700px] 2xl:w-[820px] items-start flex-col">
       <div>
@@ -55,12 +61,23 @@ const HomeMain = () => {
       </div>
       <div className="flex items-center justify-between w-[300px] h-[50px]">
         <Link
-          to={"/contact"}
+          to={"/"}
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToSection("contact");
+          }}
           className="h-[44px] font-semibold w-[180px] rounded-lg flex justify-center items-center bg-[rgb(145,75,241)]"
         >
           Let's Talk
         </Link>
-        <Link className="flex items-center gap-[10px] group" to={"/projects"}>
+        <Link
+          className="flex items-center gap-[10px] group"
+          to={"/"}
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToSection("project");
+          }}
+        >
           My Work{" "}
           <ArrowRight
             size={16}

@@ -109,18 +109,21 @@ const Navbar = () => {
         </li>
       </ul>
       <div className="md:flex hidden gap-[30px] ml-auto items-center">
-        <div className="flex gap-[5px] items-center cursor-pointer transition-all duration-300 ease-in-out hover:text-[rgb(145,75,241)]">
+        <div
+          onClick={() => window.open("/TejasJain.pdf", "_blank")}
+          className="flex gap-[5px] items-center cursor-pointer transition-all duration-300 ease-in-out hover:text-[rgb(145,75,241)]"
+        >
           <div>
             <ArrowDownToLine size={16} />
           </div>
           <p className="text-[18px] font-['Roboto+Slab']">RESUME</p>
         </div>
-        <div className="flex gap-[5px] items-center cursor-pointer transition-all duration-300 ease-in-out hover:text-[rgb(145,75,241)]">
+        {/* <div className="flex gap-[5px] items-center cursor-pointer transition-all duration-300 ease-in-out hover:text-[rgb(145,75,241)]">
           <div>
             <ArrowDownToLine size={16} />
           </div>
           <p className="text-[18px] font-['Roboto+Slab']">CV</p>
-        </div>
+        </div> */}
       </div>
     </nav>
   );
