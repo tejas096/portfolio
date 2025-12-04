@@ -1,5 +1,3 @@
-// import { Link } from "react-router-dom";
-
 type PropType = {
   name: string;
   title: string;
@@ -9,7 +7,6 @@ type PropType = {
 const SkillCard = ({ name, title, image, addClass }: PropType) => {
   return (
     <div
-      // to={"/skills"}
       className={`${
         addClass && `${addClass}`
       } bg-[rgb(39,40,41)] hover:bg-[rgb(145,75,241)] hover:cursor-pointer transition-all duration-300 ease-in-out items-center gap-[20px] justify-start h-[85px] lg:h-[100px] w-[450px] sm:w-[250px] xl:w-[320px] rounded-lg p-[15px] flex`}

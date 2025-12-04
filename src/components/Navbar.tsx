@@ -2,17 +2,23 @@ import {
   House,
   Folder,
   Wrench,
-  // Briefcase,
+  Briefcase,
   Newspaper,
   Mail,
-  // GraduationCap,
   ArrowDownToLine,
 } from "lucide-react";
 import WrapIcons from "./WrapIcons";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-const sections = ["summary", "project", "skills", "blog", "contact"];
+const sections = [
+  "summary",
+  "project",
+  "skills",
+  "blog",
+  "contact",
+  "experience",
+];
 
 const Navbar = () => {
   const [active, setActive] = useState("summary");
@@ -75,20 +81,15 @@ const Navbar = () => {
             children={<Wrench size={20} className="cursor-pointer" />}
           />
         </li>
-        {/* <li>
+        <li>
           <WrapIcons
-            link="/experience"
+            link="experience"
             tooltip="Experience"
+            active={active}
+            setActive={setActive}
             children={<Briefcase size={20} className="cursor-pointer" />}
           />
-        </li> */}
-        {/* <li>
-          <WrapIcons
-            link="/education"
-            tooltip="Eductaion"
-            children={<GraduationCap size={20} className="cursor-pointer" />}
-          />
-        </li> */}
+        </li>
         <li>
           <WrapIcons
             link="blog"
@@ -118,12 +119,15 @@ const Navbar = () => {
           </div>
           <p className="text-[18px] font-['Roboto+Slab']">RESUME</p>
         </div>
-        {/* <div className="flex gap-[5px] items-center cursor-pointer transition-all duration-300 ease-in-out hover:text-[rgb(145,75,241)]">
+        <div
+          onClick={() => window.open("/TejasJain.pdf", "_blank")}
+          className="flex gap-[5px] items-center cursor-pointer transition-all duration-300 ease-in-out hover:text-[rgb(145,75,241)]"
+        >
           <div>
             <ArrowDownToLine size={16} />
           </div>
           <p className="text-[18px] font-['Roboto+Slab']">CV</p>
-        </div> */}
+        </div>
       </div>
     </nav>
   );

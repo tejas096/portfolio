@@ -1,5 +1,4 @@
 import { Link as Link2 } from "lucide-react";
-// import { Link } from "react-router-dom";
 
 type PropType = {
   id: number;
@@ -11,7 +10,6 @@ type PropType = {
 
 const ProjectCard = ({ name, title, image, link }: PropType) => {
   return (
-    // <Link to={`/projects/#project${id}`} className="block w-full h-full">
     <div className="group h-full cursor-pointer w-[320px] sm:w-[480px] md:w-[600px] p-[20px] flex flex-col justify-between gap-[20px] rounded-xl snap-center shrink-0 bg-[rgb(39,40,41)]">
       <div className="flex pr-[5px] sm:pr-[30px] justify-between items-center">
         <h1 className="group-hover:text-[rgb(145,75,241)] transition-all duration-300 ease-in-out text-[36px] sm:text-[44px] font-semibold leading-[1.1em]">
@@ -36,7 +34,6 @@ const ProjectCard = ({ name, title, image, link }: PropType) => {
         <div className="text-[18px] text-[rgb(217,217,217)]">{title}</div>
       </div>
     </div>
-    // </Link>
   );
 };
 

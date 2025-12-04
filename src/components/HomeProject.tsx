@@ -1,10 +1,6 @@
 import ProjectCard from "./ProjectCard";
 import Crypto from "../assests/project1.webp";
 import Airbnb from "../assests/project2.webp";
-// import Google from "../assests/project1.webp";
-// import Airbnb from "../assests/project2.webp";
-// import Amazon from "../assests/project3.webp";
-// import ChatGPT from "../assests/project4.webp";
 
 const HomeSecond = () => {
   return (
