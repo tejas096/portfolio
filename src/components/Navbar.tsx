@@ -76,7 +76,7 @@ const Navbar = () => {
         </li>
         <li>
           <WrapIcons
-            link="experience"
+            link="experiences"
             tooltip="Experience"
             active={active}
             setActive={setActive}
