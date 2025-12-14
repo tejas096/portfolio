@@ -16,8 +16,8 @@ const HomeExperience = () => {
           points={[
             "Selected for NPTEL Winter Internship 2025 under Prof. Sudarshan Iyengar, IIT Ropar.",
             "Worked on assigned technical tasks and problem statements under academic mentorship.",
-            "Gained exposure to research-oriented problem solving, structured documentation, and disciplined development practices.",
             "Collaborated in a virtual academic environment with a focus on quality and correctness.",
+            "Gained exposure to research-oriented problem solving, structured documentation, and disciplined development practices.",
           ]}
         />
         <ExperienceCard

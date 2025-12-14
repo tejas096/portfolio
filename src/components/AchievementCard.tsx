@@ -7,7 +7,7 @@ type PropType = {
 
 const AchievementCard = ({ image, name, date }: PropType) => {
   return (
-    <div className="group h-full md:h-[380px] cursor-pointer w-[45%] flex flex-col overflow-hidden gap-[15px] max-sm:gap-[10px] rounded-xl snap-center shrink-0 bg-[rgb(39,40,41)]">
+    <div className="group h-full md:h-[380px] cursor-pointer w-full xs:w-[340px] flex flex-col overflow-hidden gap-[15px] max-sm:gap-[10px] rounded-xl snap-center shrink-0 bg-[rgb(39,40,41)]">
       <div className="h-[250px] w-full overflow-hidden rounded-t-lg shrink-0">
         <img
           className="h-full w-full transition-all duration-300 ease-in-out rounded-t-lg object-cover object-center group-hover:scale-105"
