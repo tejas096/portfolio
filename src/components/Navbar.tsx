@@ -6,6 +6,7 @@ import {
   Newspaper,
   Mail,
   ArrowDownToLine,
+  Trophy,
 } from "lucide-react";
 import WrapIcons from "./WrapIcons";
 import { NavLink } from "react-router-dom";
@@ -17,7 +18,8 @@ const sections = [
   "skills",
   "blog",
   "contact",
-  "experience",
+  "experiences",
+  "achievements",
 ];
 
 const Navbar = () => {
@@ -74,6 +76,15 @@ const Navbar = () => {
         </li>
         <li>
           <WrapIcons
+            link="experience"
+            tooltip="Experience"
+            active={active}
+            setActive={setActive}
+            children={<Briefcase size={20} className="cursor-pointer" />}
+          />
+        </li>
+        <li>
+          <WrapIcons
             link="skills"
             tooltip="Skills"
             active={active}
@@ -83,11 +94,11 @@ const Navbar = () => {
         </li>
         <li>
           <WrapIcons
-            link="experience"
-            tooltip="Experience"
+            link="achievements"
+            tooltip="Achievement"
             active={active}
             setActive={setActive}
-            children={<Briefcase size={20} className="cursor-pointer" />}
+            children={<Trophy size={20} className="cursor-pointer" />}
           />
         </li>
         <li>

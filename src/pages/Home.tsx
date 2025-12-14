@@ -7,6 +7,8 @@ import HomeQue from "../components/HomeQue";
 import HomeSkills from "../components/HomeSkills";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import HomeExperience from "../components/HomeExperience";
+import HomeAchievement from "../components/HomeAchievement";
 
 const Home: React.FC = () => {
   return (
@@ -35,10 +37,22 @@ const Home: React.FC = () => {
           <HomeProject />
         </section>
         <section
+          id="experiences"
+          className="flex max-lg:items-center h-full flex-col w-full snap-start max-lg:pb-[20px]"
+        >
+          <HomeExperience />
+        </section>
+        <section
           id="skills"
           className="flex max-lg:items-center h-full flex-col w-full snap-start max-lg:pb-[20px]"
         >
           <HomeSkills />
+        </section>
+        <section
+          id="achievements"
+          className="flex max-lg:items-center h-full flex-col w-full snap-start max-lg:pb-[20px]"
+        >
+          <HomeAchievement />
         </section>
         <section
           id="blog"
