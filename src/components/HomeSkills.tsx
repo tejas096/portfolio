@@ -1,10 +1,5 @@
-import Java from "../assests/java.webp";
-import React from "../assests/react.webp";
-import NextJs from "../assests/next.webp";
-import Typescript from "../assests/typescript.webp";
-import NodeJs from "../assests/node.webp";
-import Sql from "../assests/sql.webp";
 import SkillCard from "./SkillCard";
+import { data } from "../data/data";
 
 const HomeSkills = () => {
   return (
@@ -15,21 +10,14 @@ const HomeSkills = () => {
         <span className="text-[rgb(145,75,241)]">Results</span>
       </h1>
       <div className="flex flex-wrap w-full gap-[10px] xs:gap-[20px]">
-        <SkillCard name={"Java"} title={"Powerful Programming"} image={Java} />
-        <SkillCard name={"NextJs"} title={"Web Framework"} image={NextJs} />
-        <SkillCard name={"React"} title={"Dynamic Interfaces"} image={React} />
-        <SkillCard
-          name={"Typescript"}
-          title={"Typed JavaScript"}
-          image={Typescript}
-        />
-        <SkillCard name={"NodeJs"} title={"Backend Runtime"} image={NodeJs} />
-        <SkillCard
-          addClass="max-sm:hidden"
-          name={"Sql"}
-          title={"Data Management"}
-          image={Sql}
-        />
+        {data.skills.map((item) => (
+          <SkillCard
+            key={item.id}
+            name={item.title}
+            title={item.description}
+            image={item.img}
+          />
+        ))}
       </div>
     </div>
   );

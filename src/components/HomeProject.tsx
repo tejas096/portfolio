@@ -1,6 +1,5 @@
 import ProjectCard from "./ProjectCard";
-import Crypto from "../assests/project1.webp";
-import Airbnb from "../assests/project2.webp";
+import { data } from "../data/data";
 
 const HomeSecond = () => {
   return (
@@ -10,22 +9,16 @@ const HomeSecond = () => {
         <br /> and <span className="text-[rgb(145,75,241)]">Achievements</span>
       </h1>
       <div className="flex items-start xs:w-full w-[320px] md:w-[600px] xl:w-[700px] 2xl:w-[800px] scrollbar-hide overflow-y-hidden overflow-x-auto gap-[20px] snap-x snap-mandatory">
-        <ProjectCard
-          id={1}
-          name={"Crypto Coins Tracker"}
-          image={Crypto}
-          title={
-            "A real-time crypto tracker app fetching live market data via API, displaying prices, trends, and updates for multiple coins with an intuitive, user-friendly interface."
-          }
-          link={"https://crypto-coins-tracker-tj.vercel.app/"}
-        />
-        <ProjectCard
-          id={2}
-          name={"Travelnest"}
-          image={Airbnb}
-          title="A full-stack Airbnb clone featuring property listings, maps integration, reviews, and secure authentication with complete CRUD operations for adding, editing, and managing stays seamlessly."
-          link={"https://travelnest-tj.vercel.app/"}
-        />
+        {data.projects.map((item) => (
+          <ProjectCard
+            key={item.id}
+            id={item.id}
+            name={item.title}
+            image={item.image[0].toString()}
+            title={item.description}
+            link={item.live_link}
+          />
+        ))}
       </div>
     </div>
   );

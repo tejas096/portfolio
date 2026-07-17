@@ -1,9 +1,7 @@
 import Profile from "../components/Profile";
 import HomeMain from "../components/HomeMain";
-import HomeBlogs from "../components/HomeBlogs";
 import HomeContact from "../components/HomeContact";
 import HomeProject from "../components/HomeProject";
-import HomeQue from "../components/HomeQue";
 import HomeSkills from "../components/HomeSkills";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
@@ -53,18 +51,6 @@ const Home: React.FC = () => {
           className="flex max-lg:items-center h-full flex-col w-full snap-start max-lg:pb-[20px]"
         >
           <HomeAchievement />
-        </section>
-        <section
-          id="blog"
-          className="flex max-lg:items-center h-full flex-col w-full snap-start max-lg:pb-[20px]"
-        >
-          <HomeBlogs />
-        </section>
-        <section
-          id="ques"
-          className="flex max-lg:items-center h-full flex-col w-full snap-start max-lg:pb-[20px]"
-        >
-          <HomeQue />
         </section>
         <section
           id="contact"

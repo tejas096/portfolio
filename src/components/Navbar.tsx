@@ -3,7 +3,6 @@ import {
   Folder,
   Wrench,
   Briefcase,
-  Newspaper,
   Mail,
   ArrowDownToLine,
   Trophy,
@@ -16,7 +15,6 @@ const sections = [
   "summary",
   "project",
   "skills",
-  "blog",
   "contact",
   "experiences",
   "achievements",
@@ -99,15 +97,6 @@ const Navbar = () => {
             active={active}
             setActive={setActive}
             children={<Trophy size={20} className="cursor-pointer" />}
-          />
-        </li>
-        <li>
-          <WrapIcons
-            link="blog"
-            tooltip="Blogs"
-            active={active}
-            setActive={setActive}
-            children={<Newspaper size={20} className="cursor-pointer" />}
           />
         </li>
         <li>

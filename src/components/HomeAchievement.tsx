@@ -1,7 +1,5 @@
 import AchievementCard from "./AchievementCard";
-import JavaDsa from "../assests/DSA Java.webp";
-import DBMS from "../assests/DBMS NPTEL.webp";
-import Java from "../assests/Java NPTEL.webp";
+import { data } from "../data/data";
 
 const HomeAchievement = () => {
   return (
@@ -11,24 +9,15 @@ const HomeAchievement = () => {
         <br /> & <span className="text-[rgb(145,75,241)]">Milestones</span>
       </h1>
       <div className="flex h-full overflow-y-hidden items-start xs:w-full w-[320px] md:w-[600px] xl:w-[700px] 2xl:w-[800px] scrollbar-hide overflow-x-auto gap-[20px] snap-x snap-mandatory">
-        <AchievementCard
-          id={1}
-          image={JavaDsa}
-          name={"Data Structure & Algorithms using Java"}
-          date={"Oct, 2025"}
-        />
-        <AchievementCard
-          id={1}
-          image={DBMS}
-          name={"Database Management System"}
-          date={"Sep, 2025"}
-        />
-        <AchievementCard
-          id={1}
-          image={Java}
-          name={"Programming In Java"}
-          date={"Apr, 2025"}
-        />
+        {data.achievements.map((item) => (
+          <AchievementCard
+            key={item.id}
+            id={item.id}
+            image={item.img}
+            name={item.title}
+            date={item.date}
+          />
+        ))}
       </div>
     </div>
   );

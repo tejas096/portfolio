@@ -1,16 +1,8 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { data } from "../data/data";
 
 const HomeMain = () => {
-  const roles = [
-    "Full Stack Developer",
-    "Frontend Developer",
-    "Backend Developer",
-    "Problem Solver",
-    "SQL Developer",
-    "AI/ML Enthusiast",
-    "Open Source Contributor",
-  ];
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
     if (section) {
@@ -25,15 +17,13 @@ const HomeMain = () => {
           <span className="text-[rgb(145,75,241)]">Code</span>
         </h1>
         <div className="text-[18px] text-[rgb(217,217,217)] leading-[1.2em] pt-[10px]">
-          An aspiring full-stack developer exploring the realms of AI & Machine
-          Learning. Passionate about continuous learning, creative
-          problem-solving, and building projects that make an impact.
+          {data.about.description}
         </div>
       </div>
       <div className="flex justify-between w-[320px] xs:w-[400px] xl:w-[550px]">
         <div>
           <div className="text-[48px] xl:text-[70px] font-semibold leading-[1.2em]">
-            +1
+            +{data.about.years_of_exp}
           </div>
           <div className="leading-[1.2em] text-[rgb(217,217,217)]">
             YEARS OF
@@ -42,7 +32,7 @@ const HomeMain = () => {
         </div>
         <div>
           <div className="text-[48px] xl:text-[70px] font-semibold leading-[1.2em]">
-            +5
+            +{data.about.projects_completed}
           </div>
           <div className="leading-[1.2em] text-[rgb(217,217,217)]">
             PROJECTS
@@ -91,7 +81,7 @@ const HomeMain = () => {
         </div>
         <div className="w-[320px] xs:w-[400px] xl:w-[750px] overflow-hidden py-4 [mask-image:linear-gradient(to_right,rgba(0,0,0,0)_0%,rgb(0,0,0)_12.5%,rgb(0,0,0)_87.5%,rgba(0,0,0,0)_100%)]">
           <div className="flex gap-8 animate-marquee whitespace-nowrap">
-            {roles.concat(roles).map((role, index) => (
+            {data.about.roles.concat(data.about.roles).map((role, index) => (
               <span
                 key={index}
                 className="text-lg text-white font-semibold px-4 py-2"
