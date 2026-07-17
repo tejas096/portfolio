@@ -10,13 +10,7 @@ const HomeAchievement = () => {
       </h1>
       <div className="flex h-full overflow-y-hidden items-start xs:w-full w-[320px] md:w-[600px] xl:w-[700px] 2xl:w-[800px] scrollbar-hide overflow-x-auto gap-[20px] snap-x snap-mandatory">
         {data.achievements.map((item) => (
-          <AchievementCard
-            key={item.id}
-            id={item.id}
-            image={item.img}
-            name={item.title}
-            date={item.date}
-          />
+          <AchievementCard key={item.id} achievement={item} />
         ))}
       </div>
     </div>

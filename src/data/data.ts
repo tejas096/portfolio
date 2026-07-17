@@ -30,7 +30,7 @@ interface Skill {
   img: string;
 }
 
-interface Achievement {
+export interface Achievement {
   id: number;
   title: string;
   img: string;
@@ -166,7 +166,18 @@ export const data: Data = {
         "Strengthened debugging skills and logical thinking through hands-on coding practice",
         "Built a strong base for designing scalable and efficient backend systems",
       ],
-      skills: ["Java", "Data Structure"],
+      skills: [
+        "Java",
+        "Data Structures",
+        "Algorithms",
+        "Problem Solving",
+        "Object-Oriented Programming",
+        "Time Complexity",
+        "Space Complexity",
+        "Algorithm Optimization",
+        "Graph Algorithms",
+        "Dynamic Programming",
+      ],
     },
     {
       id: 2,
@@ -185,7 +196,20 @@ export const data: Data = {
         "Applied database concepts through rigorous assignments and real-world case studies",
         "Built a solid foundation for developing scalable and efficient data-driven systems",
       ],
-      skills: ["SQL", "MongoDB"],
+      skills: [
+        "SQL",
+        "Database Management Systems",
+        "Database Design",
+        "Entity-Relationship Modeling",
+        "Normalization",
+        "Relational Algebra",
+        "Query Optimization",
+        "Indexing",
+        "Transaction Management",
+        "Concurrency Control",
+        "Database Recovery",
+        "ACID Properties",
+      ],
     },
     {
       id: 3,
@@ -204,7 +228,20 @@ export const data: Data = {
         "Improved debugging, code structuring, and maintainability practices",
         "Built a strong foundation for backend development using Java",
       ],
-      skills: ["Java", "Data Structure"],
+      skills: [
+        "Java",
+        "Object-Oriented Programming",
+        "Java Collections Framework",
+        "Exception Handling",
+        "Generics",
+        "Multithreading",
+        "Concurrency",
+        "File I/O",
+        "JVM Fundamentals",
+        "Memory Management",
+        "Debugging",
+        "Problem Solving",
+      ],
     },
   ],
   experiences: [
