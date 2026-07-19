@@ -1,6 +1,6 @@
 import profile_img from "../assests/tejas.webp";
-import crpto_project from "../assests/project1.webp";
-import travelnest_project from "../assests/project2.webp";
+import coursestack_project from "../assests/course_stack.png";
+import personasite_project from "../assests/Persona.png";
 import dsa from "../assests/DSA Java.webp";
 import java from "../assests/Java NPTEL.webp";
 import dbms from "../assests/DBMS NPTEL.webp";
@@ -12,10 +12,11 @@ import nodeimg from "../assests/node.webp";
 import sqlimg from "../assests/sql.webp";
 import intern from "../assests/internship.webp";
 
-interface Project {
+export interface Project {
   id: number;
+  name: string;
   title: string;
-  image: String[];
+  image: string;
   description: string;
   points: string[];
   live_link: string;
@@ -40,7 +41,7 @@ export interface Achievement {
   skills: string[];
 }
 
-interface Experience {
+export interface Experience {
   id: number;
   company: string;
   img: string;
@@ -98,42 +99,82 @@ export const data: Data = {
   projects: [
     {
       id: 1,
-      title: "Crypto Coins Tracker",
-      image: [crpto_project],
+      name: "CourseStack",
+      title: "CourseStack - Learning Playlist Platform",
+      image: coursestack_project,
       description:
-        "A real-time crypto tracker app fetching live market data via API, displaying prices, trends, and updates for multiple coins with an intuitive, user-friendly interface.",
+        "Learning resources are scattered across countless YouTube channels, making it difficult to follow a structured path. CourseStack enables users to create, organize, share, and monetize curated learning roadmaps by combining YouTube videos from multiple creators into a single, well-structured playlist.",
       points: [
-        "Developed a real-time cryptocurrency tracking application using live market data APIs",
-        "Integrated external APIs to fetch up-to-date prices, trends, and market updates",
-        "Displayed data for multiple cryptocurrencies with a dynamic and responsive UI",
-        "Implemented real-time updates to ensure accurate and current information",
-        "Designed an intuitive and user-friendly interface for a seamless user experience",
-        "Visualized market trends and price movements for better data understanding",
-        "Optimized performance for smooth data rendering and fast API responses",
+        "Developed a full-stack platform for creating structured learning playlists using YouTube videos from multiple creators.",
+        "Implemented secure authentication with Google OAuth for seamless user onboarding and account management.",
+        "Built playlist management features allowing users to create, edit, organize, and categorize learning roadmaps.",
+        "Added privacy controls to support public, private, and premium playlists for flexible content sharing.",
+        "Integrated Razorpay payment gateway to enable creators to monetize premium learning playlists securely.",
+        "Designed a responsive and modern user interface using React, TypeScript, and Tailwind CSS for an intuitive user experience.",
+        "Built a scalable backend using Node.js, Express, and MongoDB to efficiently manage users, playlists, and transactions.",
       ],
-      live_link: "https://www.youtube.com/",
-      git_link: "https://www.youtube.com/",
-      skills: ["HTML", "CSS", "Javascript", "Typescript"],
+      live_link: "https://course-stack096.vercel.app/",
+      git_link: "https://github.com/tejas096/course-stack",
+      skills: [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Google OAuth",
+        "JWT Authentication",
+        "Razorpay",
+        "REST APIs",
+        "CRUD Operations",
+        "Responsive Design",
+        "Playlist Management",
+        "Access Control",
+        "Database Design",
+        "Full-Stack Development",
+      ],
     },
     {
       id: 2,
-      title: "Travelnest",
-      image: [travelnest_project],
+      name: "PersonaSite",
+      title: "PersonaSite - No-Code Portfolio Builder",
+      image: personasite_project,
       description:
-        "A full-stack Airbnb clone featuring property listings, maps integration, reviews, and secure authentication with complete CRUD operations for adding, editing, and managing stays seamlessly.",
+        "Creating a professional portfolio website often requires coding, design, and deployment knowledge. PersonaSite simplifies the process by enabling users to build, customize, preview, and publish fully responsive portfolio websites through a no-code interface using reusable templates and dynamic website generation.",
       points: [
-        "Built a full-stack Airbnb clone with end-to-end functionality",
-        "Implemented property listing features with detailed stay information",
-        "Integrated maps for location-based property visualization",
-        "Developed a review and rating system for user feedback",
-        "Added secure authentication and authorization for users",
-        "Implemented complete CRUD operations for managing property listings",
-        "Enabled seamless adding, editing, and deletion of stays",
-        "Designed a smooth and user-friendly booking and browsing experience",
+        "Developed a full-stack no-code platform that enables users to create and publish professional portfolio websites without writing code.",
+        "Implemented secure authentication and user account management for creating, editing, and managing multiple portfolio websites.",
+        "Built reusable portfolio templates with dynamic rendering to generate personalized websites from user-provided information.",
+        "Implemented extensive customization features, allowing users to edit personal information, projects, skills, experience, education, themes, and social links.",
+        "Integrated real-time live preview so users can instantly visualize portfolio changes before publishing.",
+        "Enabled one-click portfolio publishing with unique portfolio URLs, making websites instantly accessible online.",
+        "Implemented image uploads, resume management, and SEO-friendly portfolio pages to improve discoverability and professional presentation.",
+        "Designed fully responsive layouts using Next.js, TypeScript, and Tailwind CSS to provide a seamless experience across desktop, tablet, and mobile devices.",
+        "Developed a scalable backend using Node.js and MongoDB to efficiently manage users, templates, portfolios, and published content.",
       ],
-      live_link: "https://www.youtube.com/",
-      git_link: "https://www.youtube.com/",
-      skills: ["HTML", "CSS", "Javascript", "Typescript"],
+      live_link: "https://persona-site096.vercel.app/",
+      git_link: "https://github.com/tejas096/persona-site",
+      skills: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "JWT Authentication",
+        "REST APIs",
+        "CRUD Operations",
+        "Dynamic Rendering",
+        "Template System",
+        "Live Preview",
+        "SEO",
+        "Image Upload",
+        "Responsive Design",
+        "Dynamic Routing",
+        "Portfolio Generation",
+        "Database Design",
+        "Full-Stack Development",
+      ],
     },
   ],
   skills: [
@@ -250,18 +291,29 @@ export const data: Data = {
       company: "NPTEL - IIT Ropar",
       duration: "Dec, 2025 - Jan, 2026",
       description:
-        "Completed an internship under NPTEL in collaboration with IIT Ropar, gaining hands-on experience in MERN stack development, case studies, viva evaluations, peer mentoring, and a virtual hackathon. The program strengthened my technical expertise, problem-solving, teamwork, communication, leadership, and professional networking skills, preparing me for real-world software development.",
+        "Completed a full-stack development internship under NPTEL in collaboration with IIT Ropar, gaining hands-on experience in MERN stack development through practical case studies, technical evaluations, peer mentoring, and a virtual hackathon. Strengthened problem-solving, teamwork, communication, and professional collaboration while applying full-stack concepts in real-world scenarios.",
       points: [
-        "Completed an intensive MERN Stack training program on the ViBe platform.",
-        "Ranked among the Top 15 participants to complete the course.",
-        "Successfully cleared the technical viva and earned a Bronze Ticket.",
-        "Mentored peers through the endorsement process, improving leadership and communication.",
-        "Participated in a 12-hour virtual hackathon, gaining real-world teamwork and development experience.",
-        "Enhanced problem-solving, collaboration, and technical communication through case studies.",
-        "Built a professional network with 150+ LinkedIn connections during the internship.",
+        "Completed an intensive MERN Stack training program on the ViBe learning platform.",
+        "Ranked among the Top 15 participants to complete the program.",
+        "Successfully cleared the technical viva and earned a Bronze Ticket for demonstrating strong technical understanding.",
+        "Mentored peers during the endorsement process, strengthening leadership, mentoring, and communication skills.",
+        "Participated in a 12-hour virtual hackathon, collaborating with a team to design and develop a solution under strict time constraints.",
+        "Solved real-world case studies that enhanced analytical thinking and practical problem-solving.",
+        "Built a professional network of 150+ developers and mentors through LinkedIn during the internship.",
       ],
       img: intern,
-      skills: ["Javascript", "React"],
+      skills: [
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "MERN Stack",
+        "Problem Solving",
+        "Team Collaboration",
+        "Leadership",
+      ],
     },
   ],
 };

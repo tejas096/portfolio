@@ -10,14 +10,7 @@ const HomeSecond = () => {
       </h1>
       <div className="flex items-start xs:w-full w-[320px] md:w-[600px] xl:w-[700px] 2xl:w-[800px] scrollbar-hide overflow-y-hidden overflow-x-auto gap-[20px] snap-x snap-mandatory">
         {data.projects.map((item) => (
-          <ProjectCard
-            key={item.id}
-            id={item.id}
-            name={item.title}
-            image={item.image[0].toString()}
-            title={item.description}
-            link={item.live_link}
-          />
+          <ProjectCard key={item.id} project={item} />
         ))}
       </div>
     </div>

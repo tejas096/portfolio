@@ -36,7 +36,7 @@ const AchievementCard = ({ achievement }: AchievementCardProps) => {
         }
       />
 
-      <DialogContent className="min-w-[800px] select-none font-['Outfit'] min-h-[600px] bg-[rgb(16,17,18)] text-white border-none shadow-none">
+      <DialogContent className="xs:min-w-[800px] w-[400px] select-none font-['Outfit'] min-h-[600px] bg-[rgb(16,17,18)] text-white border-none shadow-none">
         <DialogHeader>
           <DialogTitle
             className={
