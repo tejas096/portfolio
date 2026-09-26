@@ -36,8 +36,8 @@ const WrapIcons = ({
           className={() =>
             `h-[35px] w-[35px] flex items-center justify-center transition-all duration-300 ease-in-out rounded-lg transition-colors duration-300 ease-in-out ${
               active === link
-                ? "bg-[rgb(145,75,241)] hover:text-white"
-                : "bg-[rgb(39,40,41)] hover:text-[rgb(145,75,241)]"
+                ? "bg-purple hover:text-white"
+                : "bg-grey  hover:text-purple"
             }`
           }
         >

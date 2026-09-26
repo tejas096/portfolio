@@ -47,9 +47,9 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-[rgb(39,40,41)] lg:h-[48px] md:w-[760px] lg:w-[800px] xl:w-[1200px] self-center rounded-xl flex py-[5px] px-[30px] items-center">
+    <nav className="bg-grey  lg:h-[48px] md:w-[760px] lg:w-[800px] xl:w-[1200px] self-center rounded-xl flex py-[5px] px-[30px] items-center">
       <NavLink className="hidden mr-auto lg:block" to="/">
-        <div className="font-['Righteous'] text-[rgb(145,75,241)] hover:scale-110 text-[32px]">
+        <div className="font-['Righteous'] text-purple hover:scale-110 text-[32px]">
           TJ.
         </div>
       </NavLink>
@@ -112,7 +112,7 @@ const Navbar = () => {
       <div className="md:flex hidden gap-[30px] ml-auto items-center">
         <div
           onClick={() => window.open("/TejasJain.pdf", "_blank")}
-          className="flex gap-[5px] items-center cursor-pointer transition-all duration-300 ease-in-out hover:text-[rgb(145,75,241)]"
+          className="flex gap-[5px] items-center cursor-pointer transition-all duration-300 ease-in-out hover:text-purple"
         >
           <div>
             <ArrowDownToLine size={16} />
@@ -121,7 +121,7 @@ const Navbar = () => {
         </div>
         <div
           onClick={() => window.open("/TejasJain.pdf", "_blank")}
-          className="flex gap-[5px] items-center cursor-pointer transition-all duration-300 ease-in-out hover:text-[rgb(145,75,241)]"
+          className="flex gap-[5px] items-center cursor-pointer transition-all duration-300 ease-in-out hover:text-purple"
         >
           <div>
             <ArrowDownToLine size={16} />

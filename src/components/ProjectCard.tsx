@@ -18,19 +18,19 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
     <Dialog>
       <DialogTrigger
         render={
-          <div className="group h-full cursor-pointer w-[320px] sm:w-[480px] md:w-[600px] p-[20px] flex flex-col justify-between gap-[20px] rounded-xl snap-center shrink-0 bg-[rgb(39,40,41)]">
+          <div className="group h-full cursor-pointer w-[320px] sm:w-[480px] md:w-[600px] p-[20px] flex flex-col justify-between gap-[20px] rounded-xl snap-center shrink-0 bg-grey ">
             <div className="flex pr-[5px] sm:pr-[30px] justify-between items-center">
-              <h1 className="group-hover:text-[rgb(145,75,241)] transition-all duration-300 ease-in-out text-[36px] sm:text-[44px] font-semibold leading-[1.1em]">
+              <h1 className="group-hover:text-purple transition-all duration-300 ease-in-out text-[36px] sm:text-[44px] font-semibold leading-[1.1em]">
                 {project.name}
               </h1>
               <a
                 href={project.live_link}
                 target="_blank"
-                className="text-[rgb(217,217,217)]"
+                className="text-light-font"
               >
                 <Link2
                   size={26}
-                  className="cursor-pointer hover:text-[rgb(145,75,241)] transition-all duration-300 ease-in-out"
+                  className="cursor-pointer hover:text-purple transition-all duration-300 ease-in-out"
                 />
               </a>
             </div>
@@ -43,7 +43,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                   alt={project.title}
                 />
               </div>
-              <div className="text-[18px] text-[rgb(217,217,217)] line-clamp-8">
+              <div className="text-[18px] text-light-font line-clamp-8">
                 {project.description}
               </div>
             </div>
@@ -54,14 +54,12 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       <DialogContent className="xs:min-w-[800px] w-[400px] select-none font-['Outfit'] xs:min-h-[600px] bg-[rgb(16,17,18)] text-white border-none shadow-none">
         <DialogHeader>
           <DialogTitle
-            className={
-              "text-[#833BE8] text-[26px] font-semibold leading-[1.1em]"
-            }
+            className={"text-purple text-[26px] font-semibold leading-[1.1em]"}
           >
             {project.title}
           </DialogTitle>
         </DialogHeader>
-        <div className="-mx-4 max-h-[62vh] xs:max-h-[72vh] text-[16px] flex flex-col items-center overflow-y-auto px-4 scrollbar-hide space-y-4 text-[rgb(217,217,217)]">
+        <div className="-mx-4 max-h-[62vh] xs:max-h-[72vh] text-[16px] flex flex-col items-center overflow-y-auto px-4 scrollbar-hide space-y-4 text-light-font">
           <p className="max-w-[700px] text-white">{project.description}</p>
           <img
             className="max-w-[700px] w-full rounded-xl"
@@ -71,7 +69,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           <ul className="space-y-2 max-w-[700px]">
             {project.points.map((point, index) => (
               <li key={index} className="flex items-start gap-3">
-                <span className="mt-1 text-[#833BE8]">✓</span>
+                <span className="mt-1 text-purple">✓</span>
                 <span className="leading-relaxed">{point}</span>
               </li>
             ))}
@@ -81,7 +79,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             {project.skills.map((skill) => (
               <span
                 key={skill}
-                className="rounded-full border border-[#833BE8]/40 bg-[#833BE8]/10 px-4 py-2 text-sm font-medium text-[#833BE8]"
+                className="rounded-full border border-purple/40 bg-purple/10 px-4 py-2 text-sm font-medium text-purple"
               >
                 {skill}
               </span>
@@ -94,7 +92,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               href={project.git_link}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-lg border border-[#833BE8]/30 bg-[#833BE8]/10 px-4 py-2 text-sm font-medium text-[#833BE8] transition-all duration-300 hover:bg-[#833BE8] hover:text-white"
+              className="flex items-center gap-2 rounded-lg border border-purple/30 bg-purple/10 px-4 py-2 text-sm font-medium text-purple transition-all duration-300 hover:bg-purple hover:text-white"
             >
               <Github size={18} />
               GitHub
@@ -106,7 +104,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               href={project.live_link}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-lg border border-[#833BE8]/30 bg-[#833BE8]/10 px-4 py-2 text-sm font-medium text-[#833BE8] transition-all duration-300 hover:bg-[#833BE8] hover:text-white"
+              className="flex items-center gap-2 rounded-lg border border-purple/30 bg-purple/10 px-4 py-2 text-sm font-medium text-purple transition-all duration-300 hover:bg-purple hover:text-white"
             >
               <ExternalLink size={18} />
               Live Link

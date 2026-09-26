@@ -9,6 +9,10 @@
   --breakpoint-xl: 80rem;
   --breakpoint-2xl: 88rem;
   --breakpoint-3xl: 120rem;
+
+  --color-purple: rgb(145, 75, 241);
+  --color-light-font: rgb(217, 217, 217);
+  --color-grey: rgb(39, 40, 41);
 }
 
 .scrollbar-hide::-webkit-scrollbar {

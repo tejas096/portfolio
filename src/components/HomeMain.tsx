@@ -14,9 +14,9 @@ const HomeMain = () => {
       <div>
         <h1 className="max-lg:w-full max-lg:text-center text-[36px] xs:text-[48px] xl:text-[68px] font-semibold leading-[1.1em]">
           Exploring Intelligence <br /> Through{" "}
-          <span className="text-[rgb(145,75,241)]">Code</span>
+          <span className="text-purple">Code</span>
         </h1>
-        <div className="text-[18px] text-[rgb(217,217,217)] leading-[1.2em] pt-[10px]">
+        <div className="text-[18px] text-light-font leading-[1.2em] pt-[10px]">
           {data.about.description}
         </div>
       </div>
@@ -25,28 +25,22 @@ const HomeMain = () => {
           <div className="text-[48px] xl:text-[70px] font-semibold leading-[1.2em]">
             +{data.about.years_of_exp}
           </div>
-          <div className="leading-[1.2em] text-[rgb(217,217,217)]">
-            YEARS OF
-          </div>
-          <div className="text-[rgb(217,217,217)]">EXPERIENCE</div>
+          <div className="leading-[1.2em] text-light-font">YEARS OF</div>
+          <div className="text-light-font">EXPERIENCE</div>
         </div>
         <div>
           <div className="text-[48px] xl:text-[70px] font-semibold leading-[1.2em]">
             +{data.about.projects_completed}
           </div>
-          <div className="leading-[1.2em] text-[rgb(217,217,217)]">
-            PROJECTS
-          </div>
-          <div className="text-[rgb(217,217,217)]">COMPLETED</div>
+          <div className="leading-[1.2em] text-light-font">PROJECTS</div>
+          <div className="text-light-font">COMPLETED</div>
         </div>
         <div>
           <div className="text-[48px] xl:text-[70px] font-semibold leading-[1.2em]">
             +&infin;
           </div>
-          <div className="leading-[1.2em] text-[rgb(217,217,217)]">
-            CURIOSITY
-          </div>
-          <div className="text-[rgb(217,217,217)]">TO LEARN</div>
+          <div className="leading-[1.2em] text-light-font">CURIOSITY</div>
+          <div className="text-light-font">TO LEARN</div>
         </div>
       </div>
       <div className="flex items-center justify-between w-[300px] h-[50px]">
@@ -56,7 +50,7 @@ const HomeMain = () => {
             e.preventDefault();
             scrollToSection("contact");
           }}
-          className="h-[44px] font-semibold w-[180px] rounded-lg flex justify-center items-center bg-[rgb(145,75,241)]"
+          className="h-[44px] font-semibold w-[180px] rounded-lg flex justify-center items-center bg-purple"
         >
           Let's Talk
         </Link>
@@ -71,12 +65,12 @@ const HomeMain = () => {
           My Work{" "}
           <ArrowRight
             size={16}
-            className="scale-x-150 scale-y-100 group-hover:text-[rgb(145,75,241)] group-hover:translate-x-1 transition-all duration-300 ease-in-out"
+            className="scale-x-150 scale-y-100 group-hover:text-purple group-hover:translate-x-1 transition-all duration-300 ease-in-out"
           />
         </Link>
       </div>
       <div>
-        <div className="text-[18px] text-[rgb(217,217,217)] ">
+        <div className="text-[18px] text-light-font ">
           Expertise Across the Development Spectrum
         </div>
         <div className="w-[320px] xs:w-[400px] xl:w-[750px] overflow-hidden py-4 [mask-image:linear-gradient(to_right,rgba(0,0,0,0)_0%,rgb(0,0,0)_12.5%,rgb(0,0,0)_87.5%,rgba(0,0,0,0)_100%)]">
