@@ -63,6 +63,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
             className="max-w-[700px] w-full rounded-xl"
             src={experience.img}
             alt={`${experience.company} Certificate`}
+            loading="lazy"
           />
 
           <div className="max-w-[650px] flex flex-wrap justify-center gap-3">

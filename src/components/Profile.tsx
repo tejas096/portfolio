@@ -15,9 +15,9 @@ const Profile: React.FC = () => {
         className="rounded-xl object-cover object-center"
         src={data.about.profile_img}
         alt={data.about.name}
-        loading="eager"
         width={240}
         height={241}
+        fetchPriority="high"
       />
       <div>
         <h1 className="name text-[36px] text-center font-bold">

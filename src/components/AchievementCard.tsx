@@ -22,6 +22,7 @@ const AchievementCard = ({ achievement }: AchievementCardProps) => {
                 className="h-full w-full transition-all duration-300 ease-in-out rounded-t-lg object-cover object-center group-hover:scale-105"
                 src={achievement.img}
                 alt={achievement.title}
+                loading="lazy"
               />
             </div>
             <div className="px-[20px] flex flex-col gap-[10px]">
@@ -57,6 +58,7 @@ const AchievementCard = ({ achievement }: AchievementCardProps) => {
             className="max-w-[700px] w-full rounded-xl"
             src={achievement.img}
             alt={`${achievement.title} Certificate`}
+            loading="lazy"
           />
 
           <div className="max-w-[650px] flex flex-wrap justify-center gap-3">

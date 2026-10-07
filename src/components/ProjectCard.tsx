@@ -65,6 +65,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             className="max-w-[700px] w-full rounded-xl"
             src={project.image}
             alt={`${project.title} Certificate`}
+            loading="lazy"
           />
           <ul className="space-y-2 max-w-[700px]">
             {project.points.map((point, index) => (
